@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Qorder.Views.Login"
+             xmlns:viewModels="clr-namespace:Qorder.ViewModels;assembly:Qorder"
+             Title="Login">
+    <ContentPage.BindingContext>
+        <viewModels:LoginViewModel   />
+    </ContentPage.BindingContext>
+    <StackLayout Orientation="Horizontal"  VerticalOptions="Center" HorizontalOptions="Center"  Padding="15"    Margin="15">
+
+        <Entry x:Name="UserName" Text="{Binding  UserName}" Placeholder="User Name" TextColor="Green"/>
+        <Entry x:Name="Password" IsPassword="True" Text="{Binding}" Placeholder="Password" />
+        <SwitchCell Text="Remember me"/>
+        <Button x:Name="btnlogin" Text="Login" />
+    </StackLayout>
+  
+	
+</ContentPage>
